@@ -1,0 +1,78 @@
+.element {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  position: relative;
+  width: 282px;
+  height: 361px;
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.element__image {
+  align-self: stretch;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  aspect-ratio: 1 / 1;
+}
+
+.element__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  padding-left: 21px;
+  padding-right: 21px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.element__name {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.element__duration {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+  color: #8b8b8b;
+}
+.element__save-button {
+  /*background: #f9f9f9;*/
+  width: 16px;
+  height: 16px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.09);
+  background-image: url(../../images/button-notsaved.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.element__save-button-active {
+  background-image: url(../../images/button-saved.svg);
+}
+
+.element__delete-button {
+  width: 16px;
+  height: 16px;
+  border: none;
+  background-image: url(../../images/button-delete.svg);  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}

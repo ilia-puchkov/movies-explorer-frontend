@@ -1,0 +1,4 @@
+@import url(../../blocks/navTab/navTab.css);
+@import url(../../blocks/navTab/__button-login/navTab__button-login.css);
+@import url(../../blocks/navTab/__button-registration/navTab__button-registration.css);
+@import url(../../blocks/navTab/__logo/navTab__logo.css);

@@ -1,0 +1,11 @@
+@import url(../../blocks/body/body.css);
+@import url(../../blocks/page/page.css);
+@import url(../Main/Main.css);
+@import url(../Footer/Footer.css);
+@import url(../Register/Register.css);
+@import url(../Header/Header.css);
+@import url(../InfoToolTip/InfoToolTip.css);
+@import url(../FilterCheckbox/FilterCheckbox.css);
+@import url(../SearchForm/SearchForm.css);
+@import url(../MoviesCardList/MoviesCardList.css);
+@import url(../MoviesCard/MoviesCard.css);
