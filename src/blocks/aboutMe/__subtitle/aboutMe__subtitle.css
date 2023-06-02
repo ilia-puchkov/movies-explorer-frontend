@@ -1,0 +1,10 @@
+.aboutMe__subtitle {
+  width: 600px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+}

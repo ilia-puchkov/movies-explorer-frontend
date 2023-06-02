@@ -1,0 +1,7 @@
+.portfolio__block {
+  display: flex;
+  justify-content: space-between;
+  width: 1140px;
+  border-bottom: 1px;
+  border-color: #424242;
+}

@@ -1,0 +1,6 @@
+.aboutProject__line {
+  margin-top: 110px;
+  width: 1140px;
+  display: flex;
+  flex-direction: row;
+}

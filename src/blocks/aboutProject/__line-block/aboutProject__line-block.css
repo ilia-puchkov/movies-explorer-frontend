@@ -1,0 +1,16 @@
+.aboutProject__line-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  width: 912px;
+  margin: 0;
+  background-color: #303030;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #ffffff;
+}

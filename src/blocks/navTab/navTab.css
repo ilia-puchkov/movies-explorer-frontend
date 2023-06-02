@@ -1,0 +1,8 @@
+.navTab {
+  display: flex;
+  justify-content: space-between;
+  height: 74px;
+  padding-left: 70px;
+  padding-right: 70px;
+  background-color: #073042;
+}

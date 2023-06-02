@@ -1,0 +1,11 @@
+.navTab__button-registration {
+  border: none;
+  background-color: transparent;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #fff;
+}
