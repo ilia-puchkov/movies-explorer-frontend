@@ -3,19 +3,19 @@
   flex-direction: column;
   align-content: space-between;
   position: relative;
-  width: 282px;
-  height: 361px;
+  width: 270px;
+  height: 218px;
   margin: 0;
   box-sizing: border-box;
   border-radius: 10px;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.05);
 }
 
 .element__image {
   align-self: stretch;
   object-fit: cover;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  aspect-ratio: 1 / 1;
+  width: 270px;
+  height: 151px;
 }
 
 .element__bottom {
@@ -23,18 +23,16 @@
   justify-content: space-between;
   align-items: center;
   background-color: #222;
-  padding-left: 21px;
-  padding-right: 21px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 .element__name {
   font-style: normal;
-  font-weight: 900;
-  font-size: 24px;
-  line-height: 29px;
-  color: #000000;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #fff;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -51,13 +49,13 @@
   color: #8b8b8b;
 }
 .element__save-button {
-  /*background: #f9f9f9;*/
   width: 16px;
   height: 16px;
   border: none;
   border-radius: 50px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.09);
   background-image: url(../../images/button-notsaved.svg);
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;

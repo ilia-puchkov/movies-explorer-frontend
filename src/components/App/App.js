@@ -51,7 +51,7 @@ function App() {
           <Route
             path='/movies'
             element={
-              <div>
+              <div className='movies'>
                 <Header />
                 <SearchForm />
                 <MoviesCardList movies={testMovies} isSavedMoviesPage={false} />
