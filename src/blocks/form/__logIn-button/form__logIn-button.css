@@ -1,15 +1,16 @@
 .form__logIn-button {
-  margin-top: 182px;
-  height: 50px;
-  background: #ffffff;
-  border-radius: 2px;
+  margin-top: 170px;
+  height: 44px;
+  background: #4285F4;
+  border-radius: 3px;
+  border: 1px;
   font-family: "Inter";
   font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
   text-align: center;
-  color: #000000;
+  color: #fff;
 }
 
 .form__logIn-button:hover {

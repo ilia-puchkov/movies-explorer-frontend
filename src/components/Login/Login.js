@@ -3,9 +3,10 @@ import Form from '../Form/Form';
 function Login() {
   return (
     <Form
-      title='Рады видеть'
+      title='Рады видеть!'
       buttonText='Войти'
       subtitleQuestion='Еще не зарегестрированы? '
+      linkPath='/signup'
       linkText='Регистрация'
     >
       <div className='form__input-block'>

@@ -2,6 +2,15 @@
   display: flex;
   justify-content: space-between;
   width: 1140px;
-  border-bottom: 1px;
-  border-color: #424242;
+  padding-top: 18px;
+  padding-bottom: 20px;
+}
+
+.portfolio__block:first-of-type{
+  padding-top: 50px;
+}
+
+.portfolio__block:nth-of-type(2) {
+  border-top: 1px solid #424242;
+  border-bottom: 1px solid #424242;
 }

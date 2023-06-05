@@ -1,4 +1,6 @@
 .aboutProject__title {
+  margin-top: 0;
+  padding-bottom: 22px;
   font-family: Inter;
   font-size: 22px;
   font-weight: 400;
@@ -6,4 +8,5 @@
   letter-spacing: -0.04em;
   text-align: left;
   color: #fff;
+  border-bottom: 1px solid #dadada;
 }

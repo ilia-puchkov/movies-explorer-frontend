@@ -6,6 +6,7 @@ function Register() {
       title='Добро пожаловать!'
       buttonText='Зарегестрироваться'
       subtitleQuestion='Уже зарегестрированы? '
+      linkPath='/signin'
       linkText='Войти'
     >
       <div className='form__input-block'>
@@ -38,7 +39,7 @@ function Register() {
         <span className='form__input-error email-input-error'></span>
       </div>
       <div className='form__input-block'>
-        <p className='form__input-block-name'>пароль</p>
+        <p className='form__input-block-name'>Пароль</p>
         <input
           className='form__auth-input form__input_el_password'
           type='password'
@@ -49,7 +50,7 @@ function Register() {
           maxLength='40'
           required
         />
-        <span className='form__input-error password-input-error'></span>
+        <span className='form__input-error password-input-error form__input-error_visible'>test</span>
       </div>
     </Form>
   );

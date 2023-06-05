@@ -3,5 +3,7 @@
   justify-content: space-evenly;
   margin-top: 100px;
   margin-bottom: 100px;
-  width: 630px;
+  width: 690px;
+  list-style-type: none;
+  padding: 0;
 }

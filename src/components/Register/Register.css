@@ -4,8 +4,8 @@
 @import url(../../blocks/form/__for-auth/-container/form__auth-container.css);
 @import url(../../blocks/form/__for-auth/-input/form__auth-input.css);
 @import url(../../blocks/form/__input-block/form__input-block.css);
-@import url(../../blocks/form/__input-error/_visible/form__input-error_visible.css);
 @import url(../../blocks/form/__input-error/form__input-error.css);
+@import url(../../blocks/form/__input-error/_visible/form__input-error_visible.css);
 @import url(../../blocks/form/__input/form__input.css);
 @import url(../../blocks/form/__input/_type/_error/form__input_type_error.css);
 @import url(../../blocks/form/__logIn-button/form__logIn-button.css);
