@@ -10,6 +10,7 @@
 @import url(../MoviesCardList/MoviesCardList.css);
 @import url(../MoviesCard/MoviesCard.css);
 @import url(../Form/Form.css);
+@import url(../Profile/Profile.css);
 
 .movies {
     width: 100%;

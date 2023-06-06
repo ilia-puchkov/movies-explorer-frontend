@@ -1,9 +1,10 @@
 // React
 // import { useEffect, useState } from 'react';
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 // Pages
 import Main from '../Main/Main';
+import Profile from '../Profile/Profile';
 import Footer from '../Footer/Footer';
 import Register from '../Register/Register';
 import Login from '../Login/Login';
@@ -22,9 +23,6 @@ import './App.css';
 import { testMovies, testLikedMovies } from '../../utils/testMovies';
 
 function App() {
-  const location = useLocation();
-  const path = location.pathname;
-
   return (
     <div className='body'>
       <div className='page'>
@@ -44,7 +42,7 @@ function App() {
             path='/profile'
             element={
               <div>
-                <Header />
+                <Profile />
               </div>
             }
           />
@@ -62,7 +60,7 @@ function App() {
           <Route
             path='/saved-movies'
             element={
-              <div>
+              <div className='movies'>
                 <Header />
                 <SearchForm />
                 <MoviesCardList movies={testLikedMovies} isSavedMoviesPage={true} />

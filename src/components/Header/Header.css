@@ -6,32 +6,35 @@
 }
 
 .header {
-  padding: 0 70px;
+  padding-right: 70px;
+  padding-left: 70px;
   min-height: 74px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   position: relative;
 }
 
 .header__button-container {
-  margin-left: auto;
+  margin-left: 0;
   display: flex;
   gap: 30px;
   align-items: center;
 }
 
-.header__button-container_films {
+.header__container_movies {
   display: flex;
-  gap: 16px;
-  margin-left: 44px;
+  flex-direction: row;
+  margin-left: 55px;
 }
 
 .header__button {
   min-height: 32px;
+  font-family: 'Inter';
   font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,8 +42,12 @@
   text-decoration: none;
 }
 
+.header__button:first-of-type {
+  margin-right: 16px;
+}
+
 .header__button_active {
-  color: #2be080;
+  font-weight: 500;
 }
 
 .header__button:hover {
@@ -48,19 +55,17 @@
   opacity: 0.6;
 }
 
-.header__button-black {
-  color: #fff;
-  background-color: #000000;
-  min-width: 76px;
-  border-radius: 3px;
-}
-
 .header__account-button {
-  width: 100px;
+  width: 99px;
   height: 32px;
-  background: #ffffff;
+  background: #202020;
   box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.08);
   border-radius: 40px;
+}
+
+.header__account-logo {
+  width: 100px;
+  height: 32px;
 }
 
 .header__account-button:hover {
@@ -69,7 +74,7 @@
 }
 
 .header__menu-button {
-  background-color: #ffffff;
+  background-color: #202020;
   border: none;
   width: 44px;
   height: 44px;
@@ -84,10 +89,6 @@
 @media screen and (max-width: 1023px) {
   .header {
     padding: 0 30px;
-  }
-
-  .header__button-container_films {
-    display: none;
   }
 
   .header__account-button {
