@@ -50,7 +50,7 @@ const testMovies = [
     _id: 8,
     isSaved: true,
   },
-  {
+  /*{
     name: 'Традиционные ценности',
     link: 'https://horrorzone.ru/uploads/_pages3/80715/midsommar-poster.jpg',
     duration: '1ч50м',
@@ -105,7 +105,7 @@ const testMovies = [
     duration: '2ч20м',
     _id: 16,
     isSaved: false,
-  },
+  },*/
 ];
 
 const testLikedMovies = [

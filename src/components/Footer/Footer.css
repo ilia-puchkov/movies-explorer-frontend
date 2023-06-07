@@ -1,5 +1,51 @@
-@import url(../../blocks/footer/footer.css);
-@import url(../../blocks/footer/__block/footer__block.css);
-@import url(../../blocks/footer/__separation/footer__separation.css);
-@import url(../../blocks/footer/__text/footer__text.css);
-@import url(../../blocks/footer/__title/footer__title.css);
+.footer {
+  height: 172px;
+  padding-top: 75px;
+  padding-bottom: 20px;
+  padding-left: 70px;
+  padding-right: 70px;
+  background: #202020;
+}
+
+.footer__block {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+.footer__text {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.footer__text:nth-of-type(2) {
+  margin-left: 20px;
+}
+
+.footer__title {
+  margin: 0;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  color: #8b8b8b;
+  border-bottom: 1px solid #424242;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 1023px) {
+.footer{
+  height: 140px;
+  padding-top: 45px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+}
+
+@media screen and (max-width: 577px) {
+}

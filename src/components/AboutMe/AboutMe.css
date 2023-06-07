@@ -1,9 +1,114 @@
-@import url(../../blocks/aboutMe/aboutMe.css);
-@import url(../../blocks/aboutMe/__block/aboutMe__block.css);
-@import url(../../blocks/aboutMe/__link/aboutMe__link.css);
-@import url(../../blocks/aboutMe/__photo/aboutMe__photo.css);
-@import url(../../blocks/aboutMe/__subtitle/aboutMe__subtitle.css);
-@import url(../../blocks/aboutMe/__text/aboutMe__text.css);
-@import url(../../blocks/aboutMe/__title/aboutMe__title.css);
-@import url(../../blocks/aboutProject/__title/aboutProject__title.css);
-@import url(../../blocks/aboutProject/__separation/aboutProject__separation.css);
+.aboutMe {
+  background: #202020;
+  display: flex;
+  flex-direction: column;
+  padding-top: 108px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.aboutProject__title {
+  margin-top: 0;
+  padding-bottom: 22px;
+  font-family: Inter;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -0.04em;
+  text-align: left;
+  color: #fff;
+  border-bottom: 1px solid #dadada;
+}
+
+.aboutMe__block {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.aboutMe__link {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.aboutMe__photo {
+  width: 270px;
+  height: 327px;
+  border-radius: 10px;
+}
+
+.aboutMe__subtitle {
+  width: 600px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+}
+
+.aboutMe__text {
+  width: 600px;
+  margin-top: 25px;
+  margin-bottom: 100px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+}
+
+.aboutMe__title {
+  width: 600px;
+  margin: 0;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 58px;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1023px) {
+  .aboutMe {
+    padding-top: 80px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .aboutMe__block {
+    margin-top: 44px;
+  }
+  .aboutMe__title {
+    width: 348px;
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .aboutMe__subtitle {
+    width: 348px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .aboutMe__text {
+    width: 364px;
+    margin-top: 20px;
+    margin-bottom: 90px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .aboutMe__photo {
+    width: 255px;
+    height: 307px;
+  }
+}
+
+@media screen and (max-width: 577px) {
+}

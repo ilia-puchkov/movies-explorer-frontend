@@ -14,5 +14,11 @@
 @import url(../../blocks/form/__subtitle/form__subtitle.css);
 @import url(../../blocks/form/__subtitle/_link/form__subtitle_link.css);
 @import url(../../blocks/form/__title/form__title.css);
-@import url(../../blocks/navTab/__logo/navTab__logo.css);
 @import url(../../blocks/form/__input-block/-name/form__input-block-name.css);
+
+.navTab__logo {
+  width: 38px;
+  height: 38px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}

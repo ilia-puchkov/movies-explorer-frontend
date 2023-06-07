@@ -1,5 +1,75 @@
-@import url(../../blocks/portfolio/portfolio.css);
-@import url(../../blocks/portfolio/__block/portfolio__block.css);
-@import url(../../blocks/portfolio/__link/portfolio__link.css);
-@import url(../../blocks/portfolio/__text/portfolio__text.css);
-@import url(../../blocks/portfolio/__title/portfolio__title.css);
+.portfolio {
+  height: 425px;
+  background: #202020;
+  padding-top: 90px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.portfolio__block {
+  display: flex;
+  justify-content: space-between;
+  width: 1140px;
+  padding-top: 18px;
+  padding-bottom: 20px;
+}
+
+.portfolio__block:first-of-type{
+  padding-top: 50px;
+}
+
+.portfolio__block:nth-of-type(2) {
+  border-top: 1px solid #424242;
+  border-bottom: 1px solid #424242;
+}
+
+.portfolio__link {
+  width: 20px;
+  height: 20px;
+  margin-top: 20px;
+  margin-right: 5px;
+  background-image: url(../../images/portfolio-link-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.portfolio__text {
+  width: 880px;
+  height: 50px;
+  margin: 0;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 50px;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+}
+
+.portfolio__title {
+  margin: 0;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #8b8b8b;
+  mix-blend-mode: normal;
+}
+
+@media screen and (max-width: 1023px) {
+  .portfolio{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .portfolio__block{
+    width: 668px;
+  }
+  .portfolio__text{
+    font-size: 28px;
+  }
+  
+  }
+  
+  @media screen and (max-width: 577px) {
+  }

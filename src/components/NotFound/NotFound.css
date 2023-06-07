@@ -46,7 +46,7 @@
   opacity: 0.6;
   cursor: pointer;
 }
-/*
+
 @media screen and (max-width: 1023px) {
   .not-found__title {
     margin-top: 408px;
@@ -77,4 +77,4 @@
     font-size: 12px;
     line-height: 15px;
   }
-} */
+}

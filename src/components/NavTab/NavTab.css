@@ -1,4 +1,55 @@
-@import url(../../blocks/navTab/navTab.css);
-@import url(../../blocks/navTab/__button-login/navTab__button-login.css);
-@import url(../../blocks/navTab/__button-registration/navTab__button-registration.css);
-@import url(../../blocks/navTab/__logo/navTab__logo.css);
+.navTab {
+  display: flex;
+  justify-content: space-between;
+  height: 74px;
+  padding-left: 70px;
+  padding-right: 70px;
+  background-color: #073042;
+}
+
+.navTab__button-login {
+  width: 76px;
+  height: 32px;
+  margin-left: 25px;
+  margin-top: 21px;
+  margin-bottom: 21px;
+  background-color: #3ddc84;
+  border-radius: 3px;
+  border: none;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #000;
+}
+
+.navTab__button-registration {
+  border: none;
+  background-color: transparent;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #fff;
+}
+
+.navTab__logo {
+  width: 38px;
+  height: 38px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+@media screen and (max-width: 1023px) {
+  .navTab {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (max-width: 577px) {
+}

@@ -1,6 +1,107 @@
-@import url(../../blocks/promo/promo.css);
-@import url(../../blocks/promo/__block/promo__block.css);
-@import url(../../blocks/promo/__button/promo__button.css);
-@import url(../../blocks/promo/__logo/promo__logo.css);
-@import url(../../blocks/promo/__text/promo__text.css);
-@import url(../../blocks/promo/__title/promo__title.css);
+.promo {
+  display: flex;
+  height: 500px;
+  padding-top: 75px;
+  padding-left: 70px;
+  padding-right: 70px;
+  background-color: #073042;
+  flex-direction: column;
+}
+
+.promo__block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.promo__block-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.promo__button {
+  width: 129px;
+  height: 36px;
+  margin-top: 84px;
+  margin-bottom: 25px;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  background-color: transparent;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #fff;
+}
+
+.promo__logo {
+  width: 310px;
+  height: 304px;
+}
+
+.promo__text {
+  width: 310px;
+  margin-top: 36px;
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #fff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.promo__title {
+  width: 640px;
+  margin: 0;
+  font-family: Inter;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #fff;
+}
+
+@media screen and (max-width: 1023px) {
+  .promo {
+    height: 775px;
+    padding-left: 70px;
+    padding-right: 70px;
+    justify-items: center;
+  }
+  .promo__block {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .promo_-block-text {
+    align-items: center;
+  }
+  .promo__logo {
+    margin-top: 65px;
+  }
+  .promo__title {
+    width: 680px;
+    margin-top: 48px;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+  }
+  .promo__text {
+    width: 260px;
+    margin-top: 22px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .promo__button {
+    align-self: center;
+    margin-top: 92px;
+  }
+}
+
+@media screen and (max-width: 577px) {
+}
