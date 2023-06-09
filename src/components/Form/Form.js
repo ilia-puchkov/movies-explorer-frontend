@@ -1,7 +1,14 @@
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../images/navtab-logo.svg';
 
-function Form({ children, title, buttonText, subtitleQuestion, linkText, linkPath }) {
+function Form({
+  children,
+  title,
+  buttonText,
+  subtitleQuestion,
+  linkText,
+  linkPath,
+}) {
   const location = useLocation();
 
   return (
@@ -24,7 +31,7 @@ function Form({ children, title, buttonText, subtitleQuestion, linkText, linkPat
         </button>
         <div className='form__subtitle'>
           <p className='form__subtitle'>{subtitleQuestion}</p>
-          <p className='form__subtitle form__subtitle_link'>            
+          <p className='form__subtitle form__subtitle_link'>
             <Link to={linkPath} className='form__subtitle_link-color'>
               {linkText}
             </Link>

@@ -56,7 +56,7 @@
   color: #ffffff;
 }
 
-.elements__extra-button:hover{
+.elements__extra-button:hover {
   opacity: 0.6;
   cursor: pointer;
 }
@@ -74,14 +74,23 @@
     column-gap: 30px;
     row-gap: 36px;
   }
-  .elements__extra{
+  .elements__extra {
     margin-bottom: 20px;
   }
 }
 
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 595px) {
+  .elements {
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0;
+  }
   .elements__grid {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    row-gap: 20px;
+  }
+  .elements__extra-button {
+    width: 240px;
   }
 }

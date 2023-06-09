@@ -1,7 +1,0 @@
-.aboutProject__block-module {
-  flex-direction: column;
-}
-
-.aboutProject__block-module:nth-child(2) {
-  padding-left: 40px;
-}

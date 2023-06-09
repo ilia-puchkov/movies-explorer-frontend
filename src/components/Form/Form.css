@@ -4,9 +4,9 @@
   margin-bottom: 37px;
 }
 
-.form__subtitle_link-color{
-  color: #4285F4;
-  text-decoration: none; 
+.form__subtitle_link-color {
+  color: #4285f4;
+  text-decoration: none;
 }
 
 .form__logIn-button_registration {
@@ -14,15 +14,23 @@
 }
 
 @media screen and (max-width: 1023px) {
-.form__logo{
-  margin-top: 232px;
-  margin-left: 186px;
-  margin-bottom: 40px;
-}
-.form__logIn-button_registration {
-  margin-top: 69px;
-}
+  .form__logo {
+    margin-top: 232px;
+    margin-left: 186px;
+    margin-bottom: 40px;
+  }
+  .form__logIn-button_registration {
+    margin-top: 69px;
+  }
 }
 
-@media screen and (max-width: 577px) {
+@media screen and (max-width: 576px) {
+  .form__logo {
+    margin-top: 56px;
+    margin-left: 0;
+    margin-bottom: 50px;
+  }
+  .form__logIn-button_registration {
+    margin-top: 157px;
+  }
 }

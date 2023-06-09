@@ -10,7 +10,6 @@
 .footer__block {
   display: flex;
   justify-content: space-between;
-  margin-top: 5px;
 }
 .footer__text {
   font-family: 'Inter';
@@ -39,13 +38,42 @@
 }
 
 @media screen and (max-width: 1023px) {
-.footer{
-  height: 140px;
-  padding-top: 45px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
+  .footer {
+    height: 140px;
+    padding-top: 45px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
-@media screen and (max-width: 577px) {
+@media screen and (max-width: 576px) {
+  .footer {
+    height: 140px;
+    padding-top: 79px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .footer__title {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .footer__block {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .footer__text {
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .footer__block-text {
+    flex-direction: column;
+  }
+  .footer__text:nth-of-type(2) {
+    margin-left: 0;
+    margin-top: 12px;
+  }
 }

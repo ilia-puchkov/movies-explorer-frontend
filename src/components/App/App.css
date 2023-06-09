@@ -1,5 +1,21 @@
-@import url(../../blocks/body/body.css);
-@import url(../../blocks/page/page.css);
+.body {
+  background-color: #202020;
+}
+
+.page {
+  max-width: 1280px;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0 auto;
+  font-family: 'Inter', Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+}
+
 @import url(../Main/Main.css);
 @import url(../Footer/Footer.css);
 @import url(../Register/Register.css);
@@ -11,9 +27,10 @@
 @import url(../MoviesCard/MoviesCard.css);
 @import url(../Form/Form.css);
 @import url(../Profile/Profile.css);
+@import url(../Navigation/Navigation.css);
 
 .movies {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }

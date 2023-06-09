@@ -24,12 +24,14 @@
   flex-direction: column;
   align-items: center;
 }
+
 .techs-table {
   display: flex;
   justify-content: space-evenly;
   margin-top: 100px;
   margin-bottom: 100px;
-  width: 690px;
+  width: calc(100% - 590px);
+  gap: 10px;
   list-style-type: none;
   padding: 0;
 }
@@ -46,18 +48,11 @@
   font-size: 14px;
   line-height: 17px;
   text-align: center;
-  letter-spacing: -0.04em;
   color: #ffffff;
-  margin:0 5px 0;   
-}
-
-.techs-table-element:first-of-type {
-  margin-left: 0;
 }
 
 .techs__title {
   width: 600px;
-  height: 58px;
   margin-top: 68px;
   margin-bottom: 26px;
   font-family: 'Inter';
@@ -85,28 +80,62 @@
 }
 
 @media screen and (max-width: 1023px) {
-.techs{
-  height: 486px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 90px;
-}
-.techs__title{
-  margin-top: 55px;
-}
-.techs__text{
-  font-size: 12px;
-line-height: 18px;
-}
-.techs-table{
-  margin-top: 83px;
-  margin-bottom: 90px;
-}
-.techs-table-element{
-  width: 84px;
-  height: 37px;
-}
+  .techs {
+    height: 486px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 90px;
+  }
+  .techs__title {
+    margin-top: 55px;
+    width: 100%;
+  }
+  .techs__text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .techs-table {
+    margin-top: 83px;
+    margin-bottom: 90px;
+    width: 100%;
+  }
+  .techs-table-element {
+    width: 84px;
+    height: 37px;
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
 
-@media screen and (max-width: 577px) {
+@media screen and (max-width: 576px) {
+  .techs {
+    height: 581px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 70px;
+  }
+  .techs__title {
+    margin-top: 60px;
+    margin-bottom: 24px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .techs__text {
+    width: 100%;
+    font-size: 11px;
+    line-height: 16px;
+  }
+  .techs-table {
+    margin-top: 40px;
+    margin-bottom: 70px;
+    width: 178px;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+  .techs-table-element {
+    width: 84px;
+    height: 37px;
+    font-size: 12px;
+    line-height: 15px;
+  }
 }

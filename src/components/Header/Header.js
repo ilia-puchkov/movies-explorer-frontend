@@ -4,8 +4,8 @@ import logo from '../../images/navtab-logo.svg';
 import accountIcon from '../../images/account-icon-svg.svg';
 import menuIcon from '../../images/menu-icon.svg';
 
-function Header() {
-const location = useLocation();
+function Header({ onNavigationClick }) {
+  const location = useLocation();
 
   return (
     <section className='header'>
@@ -17,7 +17,8 @@ const location = useLocation();
           to='/movies'
           className={`header__button ${
             location.pathname === '/movies' ? 'header__button_active' : ''
-          }`}>
+          }`}
+        >
           Фильмы
         </Link>
         <Link
@@ -31,9 +32,13 @@ const location = useLocation();
       </div>
       <div className='header__button-container'>
         <Link to='/profile' className='header__account-button'>
-          <img className='header__account-logo' src={accountIcon} alt='аккаунт' />
+          <img
+            className='header__account-logo'
+            src={accountIcon}
+            alt='аккаунт'
+          />
         </Link>
-        <button className='header__menu-button'>
+        <button className='header__menu-button' onClick={onNavigationClick}>
           <img src={menuIcon} alt='меню' />
         </button>
       </div>

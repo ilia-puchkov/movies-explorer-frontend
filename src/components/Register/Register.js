@@ -50,7 +50,9 @@ function Register() {
           maxLength='40'
           required
         />
-        <span className='form__input-error password-input-error form__input-error_visible'>test</span>
+        <span className='form__input-error password-input-error form__input-error_visible'>
+          test
+        </span>
       </div>
     </Form>
   );

@@ -1,5 +1,5 @@
 // React
-// import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 // Pages
@@ -12,6 +12,7 @@ import Header from '../Header/Header';
 import NotFound from '../NotFound/NotFound';
 import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
+import Navigation from '../Navigation/Navigation';
 
 // Popups
 import InfoTooltip from '../InfoToolTip/InfoToolTip';
@@ -22,7 +23,20 @@ import './App.css';
 // Test units
 import { testMovies, testLikedMovies } from '../../utils/testMovies';
 
+
 function App() {
+  //Variables
+  const [isNavigationOpen, setIsNavigationOpen] = useState(false);
+
+  function handleNavigationClick(){
+    setIsNavigationOpen(true);
+  }
+
+  function handleNavigationClose(){
+    setIsNavigationOpen(false);
+  }
+
+
   return (
     <div className='body'>
       <div className='page'>
@@ -41,16 +55,17 @@ function App() {
           <Route
             path='/profile'
             element={
-              <div>
+              <>
+                <Header onNavigationClick={handleNavigationClick} />
                 <Profile />
-              </div>
+              </>
             }
           />
           <Route
             path='/movies'
             element={
               <div className='movies'>
-                <Header />
+                <Header onNavigationClick={handleNavigationClick} />
                 <SearchForm />
                 <MoviesCardList movies={testMovies} isSavedMoviesPage={false} />
                 <Footer />
@@ -61,7 +76,7 @@ function App() {
             path='/saved-movies'
             element={
               <div className='movies'>
-                <Header />
+                <Header onNavigationClick={handleNavigationClick} />
                 <SearchForm />
                 <MoviesCardList movies={testLikedMovies} isSavedMoviesPage={true} />
                 <Footer />
@@ -72,6 +87,7 @@ function App() {
         </Routes>
 
         <InfoTooltip />
+        <Navigation isOpen={isNavigationOpen} onClose={handleNavigationClose} />
       </div>
     </div>
   );

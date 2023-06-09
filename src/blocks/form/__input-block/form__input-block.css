@@ -1,7 +1,0 @@
-.form__input-block {
-  display: flex;
-  flex-direction: column;
-  min-height: 68px;
-  max-height: 80px;
-  margin-bottom: 8px;
-}

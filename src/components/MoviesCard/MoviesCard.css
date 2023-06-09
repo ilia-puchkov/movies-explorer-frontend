@@ -95,5 +95,13 @@
   }
 }
 
-@media screen and (max-width: 577px) {
+@media screen and (max-width: 576px) {
+  .element {
+    width: 300px;
+    height: 235px;
+  }
+  .element__image {
+    width: 300px;
+    height: 168px;
+  }
 }

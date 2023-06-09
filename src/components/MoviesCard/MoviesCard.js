@@ -16,7 +16,7 @@ function MoviesCard(props) {
           <p className='element__duration'>{props.card.duration}</p>
         </div>
         {props.isSavedMoviesPage ? (
-          <button type='button' className="element__delete-button"></button>
+          <button type='button' className='element__delete-button'></button>
         ) : (
           <button type='button' className={cardSavedButtonClassName}></button>
         )}
