@@ -1,5 +1,4 @@
 .techs {
-  height: 525px;
   background-color: #272727;
   padding-left: 70px;
   padding-right: 70px;
@@ -9,7 +8,6 @@
 .aboutProject__title {
   margin-top: 0;
   padding-bottom: 22px;
-  font-family: Inter;
   font-size: 22px;
   font-weight: 400;
   line-height: 27px;
@@ -42,7 +40,6 @@
   padding-top: 20px;
   background: #303030;
   border-radius: 10px;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -55,7 +52,6 @@
   width: 600px;
   margin-top: 68px;
   margin-bottom: 26px;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 50px;
@@ -67,9 +63,7 @@
 
 .techs__text {
   width: 460px;
-  height: 40px;
   margin: 0;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -81,7 +75,6 @@
 
 @media screen and (max-width: 1023px) {
   .techs {
-    height: 486px;
     padding-left: 60px;
     padding-right: 60px;
     padding-top: 90px;
@@ -109,7 +102,6 @@
 
 @media screen and (max-width: 576px) {
   .techs {
-    height: 581px;
     padding-left: 14px;
     padding-right: 14px;
     padding-top: 70px;

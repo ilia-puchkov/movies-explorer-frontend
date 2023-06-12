@@ -40,6 +40,8 @@
   line-height: 17px;
   text-align: center;
   color: #4285f4;
+  background-color: transparent;
+  border: none;
 }
 
 .not-found__button:hover {
@@ -73,7 +75,6 @@
   .not-found__button {
     margin-top: 284px;
     margin-bottom: 30px;
-    min-height: 15px;
     font-size: 12px;
     line-height: 15px;
   }

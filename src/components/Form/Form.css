@@ -1,6 +1,11 @@
+.form__auth-container {
+  margin-top: 0;
+  width: calc(100% - 884px);
+  align-self: center;
+}
+
 .form__logo {
   margin-top: 70px;
-  margin-left: 443px;
   margin-bottom: 37px;
 }
 
@@ -13,10 +18,18 @@
   margin-top: 73px;
 }
 
+.form__logIn-button_disabled {
+  background-color: #f9f9f9;
+  color: #000;
+  opacity: 0.6;
+}
+
 @media screen and (max-width: 1023px) {
+  .form__auth-container {
+    width: calc(100% - 372px);
+  }
   .form__logo {
     margin-top: 232px;
-    margin-left: 186px;
     margin-bottom: 40px;
   }
   .form__logIn-button_registration {
@@ -25,9 +38,11 @@
 }
 
 @media screen and (max-width: 576px) {
+  .form__auth-container {
+    width: calc(100% - 60px);
+  }
   .form__logo {
     margin-top: 56px;
-    margin-left: 0;
     margin-bottom: 50px;
   }
   .form__logIn-button_registration {

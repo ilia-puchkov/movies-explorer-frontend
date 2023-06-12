@@ -4,6 +4,7 @@ const testMovies = [
     link: 'https://kinofilmpro.ru/wp-content/uploads/2022/02/w1500_44943050.jpg',
     duration: '2ч20м',
     _id: 1,
+    trailerLink:'https://www.youtube.com/watch?v=8BfMivMDOBI',
   },
   {
     name: 'Мясо и газонокосилка',

@@ -14,7 +14,7 @@ function Promo() {
         </div>
         <img className='promo__logo' src={promoLogo} alt='Промок-логотип' />
       </div>
-      <button className='promo__button'>Узнать больше</button>
+      <a href='#techs' className='promo__button'>Узнать больше</a>
     </section>
   );
 }

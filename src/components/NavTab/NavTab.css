@@ -16,7 +16,6 @@
   background-color: #3ddc84;
   border-radius: 3px;
   border: none;
-  font-family: Inter;
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
@@ -25,11 +24,20 @@
   color: #000;
 }
 
+.navTab__block {
+  display: flex;
+  align-items: center;
+}
+
+.navTab__button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
 .navTab__button-registration {
   border: none;
   padding: 0;
   background-color: transparent;
-  font-family: Inter;
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;

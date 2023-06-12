@@ -6,3 +6,5 @@
 
 /* App */
 @import url(../src/components/App/App.css); 
+
+* { outline: 1px solid yellow; }

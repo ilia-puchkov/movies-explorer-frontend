@@ -8,29 +8,24 @@
 .form__auth {
   max-width: 396px;
   margin: 0;
-  margin-left: 442px;
-}
-
-.form__for-auth {
-  width: 358px;
-  margin: 50px auto 0;
-  display: flex;
-  flex-direction: column;
-}
-.form__auth-container {
-  margin-top: 0;
 }
 
 .form__auth-input {
-  min-height: 16px;
   margin: 10px 0 0;
   padding: 15px 15px 15px;
   color: #fff;
   font-weight: 400;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 16px;
   background: #2f2f2f;
   border: 1px solid #2f2f2f;
+  border-radius: 8px;
+  outline: none;
+}
+
+.form__auth-input:focus {
+  font-weight: 500;
+  border: 1px solid #fff;
   border-radius: 8px;
   outline: none;
 }
@@ -48,7 +43,7 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   font-weight: 400;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 16px;
   color: #000;
 }
 
@@ -67,7 +62,6 @@
 
 .form__input-block-name {
   margin: 0;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
@@ -81,7 +75,6 @@
   height: 12px;
   visibility: hidden;
   max-width: 358px;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
@@ -99,7 +92,6 @@
   background: #4285f4;
   border-radius: 3px;
   border: 1px;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -117,7 +109,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -127,7 +118,6 @@
 }
 
 .form__subtitle_link {
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -145,9 +135,7 @@
 
 .form__title {
   margin: 0;
-  margin-left: 442px;
   margin-bottom: 39px;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -157,12 +145,6 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .form__auth {
-    margin-left: 186px;
-  }
-  .form__title {
-    margin-left: 186px;
-  }
   .form__logIn-button {
     margin-top: 160px;
   }
@@ -176,11 +158,9 @@
   }
   .form__auth {
     margin-left: 0;
-    padding-left: 30px;
     padding-right: 30px;
   }
   .form__title {
-    margin-left: 0;
     margin-bottom: 80px;
   }
   .form__input-block {

@@ -10,9 +10,9 @@ import Register from '../Register/Register';
 import Login from '../Login/Login';
 import Header from '../Header/Header';
 import NotFound from '../NotFound/NotFound';
-import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import Navigation from '../Navigation/Navigation';
+import EditProfilePopup from '../EditProfilePopup/EditProfilePopup';
 
 // Popups
 import InfoTooltip from '../InfoToolTip/InfoToolTip';
@@ -23,72 +23,60 @@ import './App.css';
 // Test units
 import { testMovies, testLikedMovies } from '../../utils/testMovies';
 
-
 function App() {
   //Variables
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
+  const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
 
-  function handleNavigationClick(){
+  function handleNavigationClick() {
     setIsNavigationOpen(true);
   }
 
-  function handleNavigationClose(){
+  function handlePopupOpenClick() {
+    setIsEditProfilePopupOpen(true);
+  }
+
+  function handlePopupClose() {
+    setIsEditProfilePopupOpen(false);
+  }
+
+  function handleNavigationClose() {
     setIsNavigationOpen(false);
   }
 
-
   return (
-    <div className='body'>
-      <div className='page'>
-        <Routes>
-          <Route
-            path='/'
-            element={
-              <div>
-                <Main />
-                <Footer />
-              </div>
-            }
-          />
-          <Route path='/signin' element={<Login />} />
-          <Route path='/signup' element={<Register />} />
-          <Route
-            path='/profile'
-            element={
-              <>
-                <Header onNavigationClick={handleNavigationClick} />
-                <Profile />
-              </>
-            }
-          />
-          <Route
-            path='/movies'
-            element={
-              <div className='movies'>
-                <Header onNavigationClick={handleNavigationClick} />
-                <SearchForm />
-                <MoviesCardList movies={testMovies} isSavedMoviesPage={false} />
-                <Footer />
-              </div>
-            }
-          />
-          <Route
-            path='/saved-movies'
-            element={
-              <div className='movies'>
-                <Header onNavigationClick={handleNavigationClick} />
-                <SearchForm />
-                <MoviesCardList movies={testLikedMovies} isSavedMoviesPage={true} />
-                <Footer />
-              </div>
-            }
-          />
-          <Route path='/*' element={<NotFound />} />
-        </Routes>
+    <div className='page'>
+      <Header onNavigationClick={handleNavigationClick} />
+      <Routes>
+        <Route path='/' element={<Main />} />
+        <Route path='/signin' element={<Login />} />
+        <Route path='/signup' element={<Register />} />
+        <Route
+          path='/profile'
+          element={<Profile onPopupClick={handlePopupOpenClick} />}
+        />
+        <Route
+          path='/movies'
+          element={
+            <MoviesCardList movies={testMovies} isSavedMoviesPage={false} />
+          }
+        />
+        <Route
+          path='/saved-movies'
+          element={
+            <MoviesCardList movies={testLikedMovies} isSavedMoviesPage={true} />
+          }
+        />
+        <Route path='/*' element={<NotFound />} />
+      </Routes>
+      <Footer />
 
-        <InfoTooltip />
-        <Navigation isOpen={isNavigationOpen} onClose={handleNavigationClose} />
-      </div>
+      <InfoTooltip />
+      <EditProfilePopup
+        isOpen={isEditProfilePopupOpen}
+        onClose={handlePopupClose}
+      />
+      <Navigation isOpen={isNavigationOpen} onClose={handleNavigationClose} />
     </div>
   );
 }

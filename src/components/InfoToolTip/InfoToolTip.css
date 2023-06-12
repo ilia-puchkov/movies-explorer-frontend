@@ -47,7 +47,6 @@
 
 .popup__tooltip-signature {
   margin: 0;
-  font-family: "Inter";
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
@@ -68,6 +67,11 @@
   background-color: transparent;
   background-size: cover;
   border: 0;
+}
+
+.popup__close-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 590px) {

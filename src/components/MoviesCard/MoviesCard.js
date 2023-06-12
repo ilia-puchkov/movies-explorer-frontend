@@ -5,14 +5,20 @@ function MoviesCard(props) {
 
   return (
     <li className='element'>
-      <img
-        className='element__image'
-        src={props.card.link}
-        alt={props.card.name}
-      />
+      <a
+        href={props.card.trailerLink}
+        target='_blank'
+        rel='noreferrer noopener'
+      >
+        <img
+          className='element__image'
+          src={props.card.link}
+          alt={props.card.name}
+        />
+      </a>
       <div className='element__bottom'>
         <div>
-          <p className='element__name'>{props.card.name}</p>
+          <h3 className='element__name'>{props.card.name}</h3>
           <p className='element__duration'>{props.card.duration}</p>
         </div>
         {props.isSavedMoviesPage ? (

@@ -3,27 +3,56 @@ function Portfolio() {
   return (
     <section className='portfolio'>
       <h2 className='portfolio__title'>Портфолио</h2>
-      <div className='portfolio__block'>
-        <p className='portfolio__text'>Статичный сайт</p>
-        <a
-          className='portfolio__link'
-          href='https://github.com/ilia-puchkov/how-to-learn'
-        ></a>
-      </div>
-      <div className='portfolio__block'>
-        <p className='portfolio__text'>Адаптивный сайт</p>
-        <a
-          className='portfolio__link'
-          href='https://github.com/ilia-puchkov/russian-travel'
-        ></a>
-      </div>
-      <div className='portfolio__block'>
-        <p className='portfolio__text'>Одностраничное приложение</p>
-        <a
-          className='portfolio__link'
-          href='https://github.com/ilia-puchkov/react-mesto-api-full-gha'
-        ></a>
-      </div>
+      <ul className='portfolio__list'>
+        <li className='portfolio__block'>
+          <a
+            className='portfolio__text'
+            href='https://github.com/ilia-puchkov/how-to-learn'
+            target='_blank'
+            rel='noreferrer noopener'
+          >
+            Статичный сайт
+          </a>
+          <a
+            className='portfolio__link'
+            href='https://github.com/ilia-puchkov/how-to-learn'
+            target='_blank'
+            rel='noreferrer noopener'
+          ></a>
+        </li>
+        <li className='portfolio__block'>
+          <a
+            className='portfolio__text'
+            href='https://github.com/ilia-puchkov/russian-travel'
+            target='_blank'
+            rel='noreferrer noopener'
+          >
+            Адаптивный сайт
+          </a>
+          <a
+            className='portfolio__link'
+            href='https://github.com/ilia-puchkov/russian-travel'
+            target='_blank'
+            rel='noreferrer noopener'
+          ></a>
+        </li>
+        <li className='portfolio__block'>
+          <a
+            className='portfolio__text'
+            href='https://github.com/ilia-puchkov/react-mesto-api-full-gha'
+            target='_blank'
+            rel='noreferrer noopener'
+          >
+            Одностраничное приложение
+          </a>
+          <a
+            className='portfolio__link'
+            href='https://github.com/ilia-puchkov/react-mesto-api-full-gha'
+            target='_blank'
+            rel='noreferrer noopener'
+          ></a>
+        </li>
+      </ul>
     </section>
   );
 }

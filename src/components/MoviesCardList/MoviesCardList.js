@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import MoviesCard from '../MoviesCard/MoviesCard';
+import SearchForm from '../SearchForm/SearchForm';
 
 function MoviesCardList({ movies, isSavedMoviesPage }) {
   // Variables
@@ -24,7 +25,9 @@ function MoviesCardList({ movies, isSavedMoviesPage }) {
   }, []);
 
   return (
-    <section className='elements'>
+    <main className='movies'>
+    <SearchForm />
+    <div className='elements'>
       <ul
         className={`elements__grid ${
           location.pathname === '/movies' ? 'elements__grid-full' : ''
@@ -45,9 +48,10 @@ function MoviesCardList({ movies, isSavedMoviesPage }) {
           location.pathname === '/movies' ? 'element__extra-visible' : ''
         }`}
       >
-        <button className='elements__extra-button'>Ещё</button>
+        <button type='button' className='elements__extra-button'>Ещё</button>
       </div>
-    </section>
+    </div>
+    </main>
   );
 }
 

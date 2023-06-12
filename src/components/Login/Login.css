@@ -8,17 +8,6 @@
 .form__auth {
   max-width: 396px;
   margin: 0;
-  margin-left: 442px;
-}
-
-.form__for-auth {
-  width: 358px;
-  margin: 50px auto 0;
-  display: flex;
-  flex-direction: column;
-}
-.form__auth-container {
-  margin-top: 0;
 }
 
 .form__auth-input {
@@ -67,7 +56,6 @@
 
 .form__input-block-name {
   margin: 0;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
@@ -78,10 +66,8 @@
 .form__input-error {
   margin-top: 9px;
   display: block;
-  height: 12px;
   visibility: hidden;
   max-width: 358px;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
@@ -99,7 +85,6 @@
   background: #4285f4;
   border-radius: 3px;
   border: 1px;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -117,7 +102,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -127,7 +111,6 @@
 }
 
 .form__subtitle_link {
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -145,9 +128,7 @@
 
 .form__title {
   margin: 0;
-  margin-left: 442px;
   margin-bottom: 39px;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -157,12 +138,6 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .form__auth {
-    margin-left: 186px;
-  }
-  .form__title {
-    margin-left: 186px;
-  }
   .form__logIn-button {
     margin-top: 160px;
   }
@@ -175,12 +150,10 @@
     align-items: center;
   }
   .form__auth {
-    margin-left: 0;
     padding-left: 30px;
     padding-right: 30px;
   }
   .form__title {
-    margin-left: 0;
     margin-bottom: 80px;
   }
   .form__input-block {

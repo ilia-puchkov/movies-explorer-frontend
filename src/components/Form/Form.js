@@ -12,7 +12,7 @@ function Form({
   const location = useLocation();
 
   return (
-    <div className='form__auth-container'>
+    <main className='form__auth-container'>
       <Link to='/'>
         <img className='navTab__logo form__logo' src={logo} alt='лого' />
       </Link>
@@ -22,10 +22,11 @@ function Form({
         <button
           className={`form__logIn-button ${
             location.pathname === '/signup'
-              ? 'form__logIn-button_registration'
+              ? 'form__logIn-button_registration form__logIn-button_disabled '
               : ''
           }`}
           type='submit'
+          disabled
         >
           {buttonText}
         </button>
@@ -38,7 +39,7 @@ function Form({
           </p>
         </div>
       </form>
-    </div>
+    </main>
   );
 }
 

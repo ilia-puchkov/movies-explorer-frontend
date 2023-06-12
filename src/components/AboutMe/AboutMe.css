@@ -10,7 +10,6 @@
 .aboutProject__title {
   margin-top: 0;
   padding-bottom: 22px;
-  font-family: Inter;
   font-size: 22px;
   font-weight: 400;
   line-height: 27px;
@@ -27,7 +26,6 @@
 }
 
 .aboutMe__link {
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -44,7 +42,6 @@
 
 .aboutMe__subtitle {
   width: 600px;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -57,7 +54,6 @@
   width: 600px;
   margin-top: 25px;
   margin-bottom: 100px;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -69,7 +65,6 @@
 .aboutMe__title {
   width: 600px;
   margin: 0;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 50px;

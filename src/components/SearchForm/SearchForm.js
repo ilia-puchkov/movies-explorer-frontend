@@ -6,11 +6,13 @@ function SearchForm() {
     <section className='search'>
       <form className='search__form'>
         <input
-          name='query'
           className='search__input'
           id='search-input'
+          name='search-query'
           type='text'
           placeholder='Фильм'
+          minLength='1'
+          required
         ></input>
         <button className='search__button' type='submit'>
           Поиск
