@@ -25,14 +25,16 @@
 .header__container_navigation {
   display: flex;
   flex-direction: row;
-  margin-left: 55px;
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-left: 55px;
+  gap: 20px;
 }
 
 .header__button {
   min-height: 32px;
+  margin: 0;
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -42,10 +44,6 @@
   justify-content: center;
   color: #fff;
   text-decoration: none;
-}
-
-.header__button:first-of-type {
-  margin-right: 16px;
 }
 
 .header__button_active {
@@ -89,7 +87,7 @@
   opacity: 0.6;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   .header {
     padding-left: 30px;
     padding-right: 30px;

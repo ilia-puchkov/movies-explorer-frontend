@@ -10,9 +10,7 @@
 .navTab__button-login {
   width: 76px;
   height: 32px;
-  margin-left: 25px;
-  margin-top: 21px;
-  margin-bottom: 21px;
+  margin: 0;
   background-color: #3ddc84;
   border-radius: 3px;
   border: none;
@@ -27,6 +25,8 @@
 .navTab__block {
   display: flex;
   align-items: center;
+  gap: 30px;
+  list-style: none;
 }
 
 .navTab__button:hover {
@@ -65,12 +65,12 @@
     padding-left: 14px;
     padding-right: 14px;
   }
+  .navTab__block {
+    gap: 14px;
+  }
   .navTab__button-login {
     width: 54px;
     height: 26px;
-    margin-left: 14px;
-    margin-top: 29px;
-    margin-bottom: 29px;
   }
   .navTab__button-registration {
     font-size: 10px;

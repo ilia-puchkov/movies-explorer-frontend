@@ -35,7 +35,9 @@ function Login() {
           maxLength='40'
           required
         />
-        <span className='form__input-error password-input-error'></span>
+        <span className='form__input-error password-input-error form__input-error_visible'>
+          Test
+        </span>
       </div>
     </Form>
   );
