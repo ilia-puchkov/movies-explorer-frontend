@@ -132,7 +132,6 @@
     padding-top: 70px;
     padding-left: 18px;
     padding-right: 18px;
-    height: 571px;
   }
   .aboutProject__title {
     padding-bottom: 28px;
@@ -162,6 +161,7 @@
   }
   .aboutProject__line {
     margin-top: 60px;
+    margin-bottom: 68px;
   }
   .aboutProject__line-part {
     width: 65%;
