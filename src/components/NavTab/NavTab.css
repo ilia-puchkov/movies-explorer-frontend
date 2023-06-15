@@ -7,7 +7,7 @@
   background-color: #073042;
 }
 
-.navTab__button-login {
+.navTab__login-button {
   width: 76px;
   height: 32px;
   margin: 0;
@@ -20,6 +20,7 @@
   letter-spacing: 0px;
   text-align: center;
   color: #000;
+  text-decoration: none;
 }
 
 .navTab__block {
@@ -34,7 +35,7 @@
   opacity: 0.6;
 }
 
-.navTab__button-registration {
+.navTab__registration-button {
   border: none;
   padding: 0;
   background-color: transparent;
@@ -44,6 +45,7 @@
   letter-spacing: 0px;
   text-align: right;
   color: #fff;
+  text-decoration: none;
 }
 
 .navTab__logo {
@@ -51,6 +53,11 @@
   height: 38px;
   margin-top: 18px;
   margin-bottom: 18px;
+}
+
+.navTab__logo:hover {
+    opacity: 0.6;
+    cursor: pointer; 
 }
 
 @media screen and (max-width: 1023px) {
@@ -68,11 +75,14 @@
   .navTab__block {
     gap: 14px;
   }
-  .navTab__button-login {
+  .navTab__login-button {
     width: 54px;
     height: 26px;
+    margin-top: 9px;
+    font-size: 12px;
+    line-height: 16px;
   }
-  .navTab__button-registration {
+  .navTab__registration-button {
     font-size: 10px;
     line-height: 16px;
   }

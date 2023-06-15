@@ -2,11 +2,17 @@
   margin-top: 0;
   width: calc(100% - 884px);
   align-self: center;
+  align-items: center;
 }
 
 .form__logo {
   margin-top: 70px;
   margin-bottom: 37px;
+}
+.form__logo-container {
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .form__subtitle_link-color {
@@ -24,7 +30,7 @@
   opacity: 0.6;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1036px) {
   .form__auth-container {
     width: calc(100% - 372px);
   }
@@ -33,7 +39,7 @@
     margin-bottom: 38px;
   }
   .form__logIn-button_registration {
-    margin-top: 69px;
+    margin-top: 72px;
   }
 }
 
@@ -44,8 +50,12 @@
   .form__logo {
     margin-top: 56px;
     margin-bottom: 48px;
+    align-self: center;
   }
   .form__logIn-button_registration {
-    margin-top: 157px;
+    margin-top: 160px;
+  }
+  .form__logo-container {
+    align-self: center;
   }
 }

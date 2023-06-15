@@ -18,7 +18,7 @@ function MoviesCard(props) {
       </a>
       <div className='element__bottom'>
         <div>
-          <h3 className='element__name'>{props.card.name}</h3>
+          <h2 className='element__name'>{props.card.name}</h2>
           <p className='element__duration'>{props.card.duration}</p>
         </div>
         {props.isSavedMoviesPage ? (

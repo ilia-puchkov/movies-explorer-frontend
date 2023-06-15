@@ -1,9 +1,9 @@
 function FilterCheckbox() {
   return (
-    <form className='filter'>
+    <div className='filter'>
       <input className='filter__checkbox' type='checkbox'></input>
       <span className='filter__text'>Короткометражки</span>
-    </form>
+    </div>
   );
 }
 

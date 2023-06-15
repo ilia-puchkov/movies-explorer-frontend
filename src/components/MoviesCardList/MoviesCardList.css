@@ -1,6 +1,5 @@
 .elements {
   max-width: 1280px;
-  min-height: 30vh;
   padding-top: 75px;
   padding-left: 70px;
   padding-right: 70px;
@@ -28,7 +27,6 @@
 }
 
 .elements__extra {
-  height: 125px;
   display: flex;
   justify-content: center;
   padding-top: 15px;
@@ -36,7 +34,6 @@
 }
 
 .element__extra-visible {
-  height: 166px;
   visibility: visible;
 }
 
@@ -44,6 +41,7 @@
   width: 320px;
   height: 36px;
   margin-top: 67px;
+  margin-bottom: 60px;
   border: 1.5px solid rgba(170, 170, 170, 0.2);
   border-radius: 8px;
   background-color: transparent;
@@ -55,9 +53,20 @@
   color: #ffffff;
 }
 
+.elements__extra-button_small {
+  margin-top: 0;
+  margin-bottom: 100px;
+}
+
 .elements__extra-button:hover {
   opacity: 0.6;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1210px) {
+  .elements__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media screen and (max-width: 1140px) {
@@ -66,9 +75,6 @@
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 30px;
-  }
-  .elements__grid {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -83,8 +89,18 @@
     column-gap: 30px;
     row-gap: 36px;
   }
-  .elements__extra {
-    margin-bottom: 20px;
+  .elements__extra-button {
+    margin-bottom: 85px;
+  }
+  .elements__extra-button_small {
+    margin-bottom: 130px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .elements__grid {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
   }
 }
 
@@ -95,14 +111,11 @@
     padding-right: 10px;
     padding-bottom: 0;
   }
-  .elements__grid {
-    grid-template-columns: repeat(1, 1fr);
-    row-gap: 20px;
-  }
   .elements__extra-button {
     width: 240px;
+    margin-bottom: 80px;
   }
-  .elements__extra {
-    margin-bottom: 18px;
+  .elements__extra-button_small {
+    margin-bottom: 120px;
   }
 }

@@ -48,7 +48,9 @@ function MoviesCardList({ movies, isSavedMoviesPage }) {
           location.pathname === '/movies' ? 'element__extra-visible' : ''
         }`}
       >
-        <button type='button' className='elements__extra-button'>Ещё</button>
+        <button type='button' className={`elements__extra-button ${
+          location.pathname === '/saved-movies' ? 'elements__extra-button_small' : ''
+        }`}>Ещё</button>
       </div>
     </div>
     </main>

@@ -59,7 +59,6 @@
 }
 
 .promo__title {
-  width: 640px;
   margin: 0;
   font-size: 50px;
   font-weight: 400;
@@ -67,6 +66,7 @@
   letter-spacing: 0px;
   text-align: left;
   color: #fff;
+  margin-right: 190px;
 }
 
 @media screen and (max-width: 1023px) {
@@ -87,7 +87,7 @@
     margin-top: 65px;
   }
   .promo__title {
-    width: 680px;
+    margin-right: 0;
     margin-top: 48px;
     font-size: 40px;
     line-height: 50px;
@@ -118,7 +118,6 @@
     height: 206px;
   }
   .promo__title {
-    width: 100%;
     margin-top: 44px;
     font-size: 28px;
     line-height: 38px;

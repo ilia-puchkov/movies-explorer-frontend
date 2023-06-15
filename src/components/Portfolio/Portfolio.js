@@ -1,56 +1,43 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
+import linkLogo from '../../images/portfolio-link-arrow.svg';
+
 function Portfolio() {
   return (
     <section className='portfolio'>
       <h2 className='portfolio__title'>Портфолио</h2>
       <ul className='portfolio__list'>
-        <li className='portfolio__block'>
+        <li>
           <a
-            className='portfolio__text'
+            className='portfolio__block'
             href='https://github.com/ilia-puchkov/how-to-learn'
             target='_blank'
             rel='noreferrer noopener'
           >
-            Статичный сайт
+            <p className='portfolio__text'>Статичный сайт</p>
+            <img src={linkLogo} className='portfolio__link' alt='ссылка' />
           </a>
-          <a
-            className='portfolio__link'
-            href='https://github.com/ilia-puchkov/how-to-learn'
-            target='_blank'
-            rel='noreferrer noopener'
-          ></a>
         </li>
-        <li className='portfolio__block'>
+        <li className='portfolio__lines'>
           <a
-            className='portfolio__text'
+            className='portfolio__block'
             href='https://github.com/ilia-puchkov/russian-travel'
             target='_blank'
             rel='noreferrer noopener'
           >
-            Адаптивный сайт
+            <p className='portfolio__text'>Адаптивный сайт</p>
+            <img src={linkLogo} className='portfolio__link' alt='ссылка' />
           </a>
-          <a
-            className='portfolio__link'
-            href='https://github.com/ilia-puchkov/russian-travel'
-            target='_blank'
-            rel='noreferrer noopener'
-          ></a>
         </li>
-        <li className='portfolio__block'>
+        <li>
           <a
-            className='portfolio__text'
+            className='portfolio__block'
             href='https://github.com/ilia-puchkov/react-mesto-api-full-gha'
             target='_blank'
             rel='noreferrer noopener'
           >
-            Одностраничное приложение
+            <p className='portfolio__text'>Одностраничное приложение</p>
+            <img src={linkLogo} className='portfolio__link' alt='ссылка' />
           </a>
-          <a
-            className='portfolio__link'
-            href='https://github.com/ilia-puchkov/react-mesto-api-full-gha'
-            target='_blank'
-            rel='noreferrer noopener'
-          ></a>
         </li>
       </ul>
     </section>

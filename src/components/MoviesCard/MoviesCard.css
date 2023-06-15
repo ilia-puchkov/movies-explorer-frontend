@@ -64,6 +64,10 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.element__save-button:hover {
+  opacity: 0.6;
   cursor: pointer;
 }
 
@@ -81,6 +85,11 @@
   background-position: center;
   background-repeat: no-repeat;
   background-color: transparent;
+}
+
+.element__delete-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {

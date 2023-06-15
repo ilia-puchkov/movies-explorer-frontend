@@ -4,6 +4,7 @@ import logo from '../../images/navtab-logo.svg';
 function Form({
   children,
   title,
+  name,
   buttonText,
   subtitleQuestion,
   linkText,
@@ -13,11 +14,13 @@ function Form({
 
   return (
     <main className='form__auth-container'>
-      <Link to='/'>
+      <section className='form__block'>
+      <Link to='/' className='form__logo-container'>
         <img className='navTab__logo form__logo' src={logo} alt='лого' />
       </Link>
-      <h3 className='form__title'>{title}</h3>
-      <form className='form form__auth' name='login_form'>
+      <h1 className='form__title'>{title}</h1>
+      
+      <form className='form form__auth' name={name}>
         {children}
         <button
           className={`form__logIn-button ${
@@ -39,6 +42,7 @@ function Form({
           </p>
         </div>
       </form>
+      </section>
     </main>
   );
 }

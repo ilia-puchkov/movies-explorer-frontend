@@ -47,6 +47,7 @@
   align-items: center;
   list-style: none;
   margin: 0;
+  margin-top: 30px;
   padding: 0;
   gap: 28px;
 }
@@ -64,8 +65,9 @@
   padding-bottom: 4px;
   border-bottom: 1px solid #ffffff;
 }
+
 .navigation__account-button {
-  display: block;
+  display: flex;
 }
 
 @media screen and (max-width: 576px) {
@@ -77,5 +79,13 @@
   }
   .navigation__link {
     margin-top: 24px;
+  }
+  .navigation__links {
+    margin-top: 25px;
+    gap: 25px;
+  }
+  .navigation__button-close {
+    top: 17px;
+    right: 17px;
   }
 }

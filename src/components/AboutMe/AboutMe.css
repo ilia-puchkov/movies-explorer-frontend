@@ -35,6 +35,11 @@
   text-decoration: none;
 }
 
+.aboutMe__link:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
 .aboutMe__photo {
   width: 270px;
   height: 327px;
@@ -94,7 +99,7 @@
     margin-top: 16px;
   }
   .aboutMe__text {
-    width: 364px;
+    max-width: 364px;
     margin-top: 20px;
     margin-bottom: 87px;
     font-size: 12px;

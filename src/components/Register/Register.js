@@ -4,6 +4,7 @@ function Register() {
   return (
     <Form
       title='Добро пожаловать!'
+      name='register_form'
       buttonText='Зарегестрироваться'
       subtitleQuestion='Уже зарегестрированы? '
       linkPath='/signin'
@@ -13,7 +14,7 @@ function Register() {
         <label className='form__input-block-name'>Имя</label>
         <input
           className='form__auth-input form__input_el_name_login'
-          type='name'
+          type='text'
           id='name'
           name='registration-name'
           placeholder='Name'

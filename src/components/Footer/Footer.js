@@ -24,28 +24,30 @@ function Footer() {
         </p>
         <div className='footer__block'>
           <p className='footer__text'>&copy; 2023</p>
-          <ul className='footer__block footer__block-text'>
-            <li>
-              <a
-                className='footer__text'
-                href='https://practicum.yandex.ru/'
-                target='_blank'
-                rel='noreferrer noopener'
-              >
-                Яндекс.Практикум
-              </a>
-            </li>
-            <li>
-              <a
-                className='footer__text'
-                href='https://github.com/'
-                target='_blank'
-                rel='noreferrer noopener'
-              >
-                Github
-              </a>
-            </li>
-          </ul>
+          <nav className='footer__block-links'>
+            <ul className='footer__block-text'>
+              <li>
+                <a
+                  className='footer__text footer__text-link'
+                  href='https://practicum.yandex.ru/'
+                  target='_blank'
+                  rel='noreferrer noopener'
+                >
+                  Яндекс.Практикум
+                </a>
+              </li>
+              <li>
+                <a
+                  className='footer__text footer__text-link'
+                  href='https://github.com/'
+                  target='_blank'
+                  rel='noreferrer noopener'
+                >
+                  Github
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </footer>
     )

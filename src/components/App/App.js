@@ -12,7 +12,7 @@ import Header from '../Header/Header';
 import NotFound from '../NotFound/NotFound';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import Navigation from '../Navigation/Navigation';
-import EditProfilePopup from '../EditProfilePopup/EditProfilePopup';
+import NavTab from '../NavTab/NavTab';
 
 // Popups
 import InfoTooltip from '../InfoToolTip/InfoToolTip';
@@ -26,34 +26,43 @@ import { testMovies, testLikedMovies } from '../../utils/testMovies';
 function App() {
   //Variables
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
-  const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
+  const [isInEditState, setIsInEditState] = useState(false);
 
   function handleNavigationClick() {
     setIsNavigationOpen(true);
-  }
-
-  function handlePopupOpenClick() {
-    setIsEditProfilePopupOpen(true);
-  }
-
-  function handlePopupClose() {
-    setIsEditProfilePopupOpen(false);
-  }
-
+  };
+  
   function handleNavigationClose() {
     setIsNavigationOpen(false);
+  };
+
+  function handleProfileClick() {
+    setIsInEditState(true);
+    console.log(isInEditState);
+  };
+
+  function handleProfileClose() {
+    setIsInEditState(false);
   }
 
   return (
     <div className='page'>
       <Header onNavigationClick={handleNavigationClick} />
       <Routes>
-        <Route path='/' element={<Main />} />
+        <Route
+          path='/'
+          element={
+            <>
+              <NavTab />
+              <Main />
+            </>
+          }
+        />
         <Route path='/signin' element={<Login />} />
         <Route path='/signup' element={<Register />} />
         <Route
           path='/profile'
-          element={<Profile onPopupClick={handlePopupOpenClick} />}
+          element={<Profile editState={isInEditState} isInEdit={handleProfileClick} onClose={handleProfileClose} />}
         />
         <Route
           path='/movies'
@@ -72,10 +81,6 @@ function App() {
       <Footer />
 
       <InfoTooltip />
-      <EditProfilePopup
-        isOpen={isEditProfilePopupOpen}
-        onClose={handlePopupClose}
-      />
       <Navigation isOpen={isNavigationOpen} onClose={handleNavigationClose} />
     </div>
   );

@@ -4,6 +4,7 @@ function Login() {
   return (
     <Form
       title='Рады видеть!'
+      name='login_form'
       buttonText='Войти'
       subtitleQuestion='Еще не зарегестрированы? '
       linkPath='/signup'

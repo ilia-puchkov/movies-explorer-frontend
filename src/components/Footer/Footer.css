@@ -13,6 +13,8 @@
 }
 
 .footer__block-text {
+  display: flex;
+  align-items: center;
   list-style: none;
   gap: 20px;
   padding: 0;
@@ -28,6 +30,11 @@
   line-height: 16px;
   color: #ffffff;
   text-decoration: none;
+}
+
+.footer__text-link:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
 
 .footer__title {
@@ -63,12 +70,11 @@
   .footer__block {
     flex-direction: column-reverse;
     align-items: center;
-    gap: 12px;
     margin-top: 25px;
   }
 
   .footer__text {
-    margin-top: 17px;
+    margin-top: 30px;
     margin-bottom: 0;
     font-size: 12px;
     line-height: 15px;
@@ -77,5 +83,6 @@
   .footer__block-text {
     flex-direction: column;
     margin: 0;
+    gap: 12px;
   }
 }

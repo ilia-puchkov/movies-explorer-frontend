@@ -5,7 +5,6 @@
   min-width: 320px;
   min-height: 100vh;
   margin: 0 auto;
-  background-color: #202020;
   font-family: 'Inter', Arial, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -27,7 +26,6 @@
 @import url(../Form/Form.css);
 @import url(../Profile/Profile.css);
 @import url(../Navigation/Navigation.css);
-@import url(../PopupWithForm/PopupWithForm.css);
 
 .movies {
   width: 100%;

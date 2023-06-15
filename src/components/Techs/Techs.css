@@ -92,6 +92,7 @@
     margin-top: 83px;
     margin-bottom: 90px;
     width: 100%;
+    gap: 9px;
   }
   .techs-table-element {
     width: 84px;
