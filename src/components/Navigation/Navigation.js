@@ -45,7 +45,7 @@ function Navigation({ isOpen, onClose }) {
             </li>
           </ul>
         </nav>
-        <Link to='/profile'>
+        <Link to='/profile' className='header__account-button navigation__account-button'>
           <button
             className='header__account-button navigation__account-button'
             type='button'

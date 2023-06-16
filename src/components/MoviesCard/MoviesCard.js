@@ -9,6 +9,7 @@ function MoviesCard(props) {
         href={props.card.trailerLink}
         target='_blank'
         rel='noreferrer noopener'
+        className="element__link"
       >
         <img
           className='element__image'

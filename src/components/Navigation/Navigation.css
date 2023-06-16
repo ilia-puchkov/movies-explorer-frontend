@@ -41,6 +41,12 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.navigation__button-close:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
 .navigation__links {
   display: flex;
   flex-direction: column;
@@ -61,6 +67,11 @@
   text-decoration: none;
   margin-top: 28px;
 }
+.navigation__link:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
 .navigation__link_active {
   padding-bottom: 4px;
   border-bottom: 1px solid #ffffff;

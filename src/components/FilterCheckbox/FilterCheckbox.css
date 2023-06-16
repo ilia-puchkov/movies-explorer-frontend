@@ -19,12 +19,16 @@
   height: 20px;
   border: none;
   outline: none;
-  background-color: #202020;
+  background-color: #343434;
   box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.08);
   border-radius: 16px;
   position: relative;
-  cursor: pointer;
   appearance: none;
+}
+
+.filter__checkbox:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
 
 .filter__checkbox::after {

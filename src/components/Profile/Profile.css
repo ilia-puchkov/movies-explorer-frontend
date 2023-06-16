@@ -72,6 +72,14 @@
   color: #ffffff;
   border: none;
   background-color: transparent;
+  outline: none;
+}
+
+.profile__text:focus {
+  font-weight: 500;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  outline: none;
 }
 
 .profile__text-email {
@@ -84,6 +92,14 @@
   color: #ffffff;
   border: none;
   background-color: transparent;
+  outline: none;
+}
+
+.profile__text-email:focus {
+  font-weight: 500;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  outline: none;
 }
 
 .profile__buttons {
