@@ -1,5 +1,5 @@
 // React
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 // Pages
@@ -22,11 +22,40 @@ import './App.css';
 
 // Test units
 import { testMovies, testLikedMovies } from '../../utils/testMovies';
+import MainApi from '../../utils/MainApi';
+import MoviesApi from '../../utils/MoviesApi';
 
 function App() {
   //Variables
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
   const [isInEditState, setIsInEditState] = useState(false);
+  const [movies, setMovies] = useState([]);
+
+  const mainApi = new MainApi ({
+    url: 'https://api.movies-reras.students.nomoredomains.rocks',
+    headers: {
+      'content-type': 'application/json',
+      Authorization: `Bearer ${localStorage.getItem('jwt')}`,    
+    },
+  });
+
+  const moviesApi = new MoviesApi ({
+    url: 'https://api.movies-reras.students.nomoredomains.rocks',
+    headers: {
+      'content-type': 'application/json',
+      Authorization: `Bearer ${localStorage.getItem('jwt')}`,    
+    },
+  });
+
+  useEffect(() => {
+    moviesApi.getInitialMovies()
+    .then((movies) => {
+      setMovies(movies);
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+  });
 
   function handleNavigationClick() {
     setIsNavigationOpen(true);
@@ -67,7 +96,7 @@ function App() {
         <Route
           path='/movies'
           element={
-            <MoviesCardList movies={testMovies} isSavedMoviesPage={false} />
+            <MoviesCardList movies={movies} isSavedMoviesPage={false} />
           }
         />
         <Route
