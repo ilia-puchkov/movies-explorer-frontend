@@ -1,0 +1,128 @@
+.element {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  position: relative;
+  width: 270px;
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.05);
+}
+
+.element__image {
+  align-self: stretch;
+  object-fit: cover;
+  width: 270px;
+  height: 151px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.element__link {
+  max-height: 151px;
+}
+
+.element__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  padding-top: 14px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-bottom: 14px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.element__name {
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #fff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.element__duration {
+  margin: 0;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+  color: #8b8b8b;
+}
+
+.element__save-button {
+  width: 16px;
+  height: 16px;
+  align-self: flex-start;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.09);
+  background-image: url(../../images/button-notsaved.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.element__save-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.element__save-button-active {
+  background-image: url(../../images/button-saved.svg);
+}
+
+.element__delete-button {
+  width: 16px;
+  height: 16px;
+  align-self: flex-start;
+  margin-top: 14px;
+  border: none;
+  background-image: url(../../images/button-delete.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.element__delete-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .element {
+    width: 339px;
+    height: 257px;
+  }
+  .element__image {
+    width: 339px;
+    height: 190px;
+  }
+  .element__link {
+    max-height: 190px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .element {
+    width: 300px;
+    height: 235px;
+  }
+  .element__image {
+    width: 300px;
+    height: 168px;
+  }
+  .element__link {
+    max-height: 168px;
+  }
+}

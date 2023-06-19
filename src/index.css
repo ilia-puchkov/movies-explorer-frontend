@@ -1,0 +1,12 @@
+/* Normalize */
+@import url(../src/vendor/normalize.css);
+
+/* Fonts*/
+@import url(../src/vendor/fonts/fonts.css);
+
+/* App */
+@import url(../src/components/App/App.css);
+
+.body {
+  background-color: #202020;
+}

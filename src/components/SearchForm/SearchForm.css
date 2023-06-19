@@ -1,0 +1,114 @@
+.search {
+  width: calc(100% - 140px);
+  padding-top: 70px;
+  padding-bottom: 44px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-bottom: 1px solid rgba(170, 170, 170, 0.2);
+}
+
+.search__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search__field {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 37px);
+  border: 1.5px solid rgba(170, 170, 170, 0.2);
+  border-radius: 8px;
+  padding-top: 10px;
+  padding-left: 25px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  margin-bottom: 27px;
+}
+
+.search__input {
+  width: calc(100% - 100px);
+  border: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #8b8b8b;
+  text-align: left;
+  outline: none;
+  border-radius: 5px;
+  background-color: #202020;
+}
+
+.search__input:focus {
+  font-weight: 500;
+  color: #fff;
+}
+
+.search__button {
+  width: 100px;
+  height: 52px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #4285f4;
+}
+
+.search__button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 1023px) {
+  .search {
+    width: calc(100% - 60px);
+    padding-bottom: 48px;
+  }
+  .search__form {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .search {
+    width: calc(100% - 28px);
+    padding-top: 70px;
+    padding-bottom: 60px;
+  }
+
+  .search__form {
+    margin-bottom: 4px;
+  }
+
+  .search__field {
+    width: calc(100% - 18px);
+    padding-top: 6px;
+    padding-left: 12px;
+    padding-bottom: 6px;
+    padding-right: 6px;
+  }
+
+  .search__input {
+    width: calc(100% - 80px);
+    text-align: left;
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .search__button {
+    width: 80px;
+    height: 44px;
+  }
+}
