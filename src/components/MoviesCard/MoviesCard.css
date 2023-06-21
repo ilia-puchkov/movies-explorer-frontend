@@ -38,6 +38,7 @@
 
 .element__name {
   margin: 0;
+  width: 220px;
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
@@ -107,6 +108,9 @@
   .element__image {
     width: 339px;
     height: 190px;
+  }
+  .element__name {
+    width: 289px;
   }
   .element__link {
     max-height: 190px;

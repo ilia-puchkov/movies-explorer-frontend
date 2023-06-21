@@ -23,7 +23,6 @@
 
 .elements__grid-full {
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
 }
 
 .elements__extra {

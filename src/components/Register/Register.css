@@ -56,7 +56,6 @@
   display: flex;
   flex-direction: column;
   min-height: 68px;
-  max-height: 80px;
   margin-bottom: 8px;
 }
 
@@ -72,7 +71,7 @@
 .form__input-error {
   margin-top: 9px;
   display: block;
-  height: 12px;
+
   visibility: hidden;
   max-width: 100%;
   font-style: normal;

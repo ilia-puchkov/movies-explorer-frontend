@@ -23,6 +23,10 @@
   align-items: center;
 }
 
+.profile__button-back{
+  margin-top: 20px;
+}
+
 .profile__line {
   display: flex;
   flex-direction: row;

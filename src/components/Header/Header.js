@@ -4,8 +4,9 @@ import logo from '../../images/navtab-logo.svg';
 import accountIcon from '../../images/account-icon.svg';
 import menuIcon from '../../images/menu-icon.svg';
 import { useEffect, useState } from 'react';
+import NavTab from '../NavTab/NavTab';
 
-function Header({ onNavigationClick }) {
+function Header({ onNavigationClick, isLoggedIn }) {
   const location = useLocation();
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
 
@@ -13,7 +14,8 @@ function Header({ onNavigationClick }) {
     if (
       location.pathname === '/movies' ||
       location.pathname === '/saved-movies' ||
-      location.pathname === '/profile'
+      location.pathname === '/profile' ||
+      location.pathname === '/'
     ) {
       setIsHeaderVisible(true);
     } else {
@@ -21,8 +23,8 @@ function Header({ onNavigationClick }) {
     }
   }, [location]);
 
-  return (
-    isHeaderVisible && (
+  return isHeaderVisible ? (
+    isLoggedIn ? (
       <header className='header'>
         <Link to='/' className='navTab__logo'>
           <img src={logo} alt='логотип' />
@@ -73,7 +75,11 @@ function Header({ onNavigationClick }) {
           </button>
         </div>
       </header>
+    ) : (
+      <NavTab />
     )
+  ) : (
+    <></>
   );
 }
 

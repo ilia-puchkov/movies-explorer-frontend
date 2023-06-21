@@ -14,7 +14,7 @@ class MoviesApi {
 
   //получение фильмов
   getInitialMovies(){
-    return fetch(this._url + '/movies', {
+    return fetch(this._url + '/beatfilm-movies', {
       method: 'GET',
       headers: this._headers
     })
