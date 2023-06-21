@@ -48,7 +48,6 @@ function Movies({
   function handleFilterMovies(movies, inquiry, short) {
     const moviesList = filterMovies(movies, inquiry, short);
     setIsClearMovies(moviesList);
-    console.log('yjuf' + moviesList);
     setFilteredMovies(short ? shortDuration(moviesList) : moviesList);
     localStorage.setItem('movies', JSON.stringify(moviesList));
     localStorage.setItem('isAllMovies', JSON.stringify(movies));
@@ -60,7 +59,6 @@ function Movies({
     localStorage.setItem('shortMovies', isShort);
 
     if (isAllMovies.length === 0) {
-      console.log('new');
       setIsLoading(true);
       moviesApi
         .getInitialMovies()
@@ -77,7 +75,6 @@ function Movies({
           setIsLoading(false);
         });
     } else {
-      console.log('old');
       handleFilterMovies(isAllMovies, inquiry, isShort);
     }
   }
@@ -91,10 +88,6 @@ function Movies({
     }
     localStorage.setItem('shortMovies', !isShort);
   }
-
-  //console.log(filteredMovies);
-  console.log(isClearMovies);
-  console.log(isAllMovies);
 
   return (
     <>

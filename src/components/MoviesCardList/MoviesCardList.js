@@ -24,7 +24,7 @@ function MoviesCardList({
 
   const location = useLocation();
 
-  // Base movies
+  // Количество сетки фильмов (база)
   function showMovies() {
     const displaySize = window.innerWidth;
     if (displaySize > 1024) {
@@ -36,7 +36,7 @@ function MoviesCardList({
     }
   }
 
-  // Add movies
+  // Количество сетки фильмов (экстра)
   function showMoreMovies() {
     const displaySize = window.innerWidth;
     if (displaySize > 1024) {
@@ -48,9 +48,17 @@ function MoviesCardList({
     }
   }
 
+  // Формирование сетки
   useEffect(() => {
     showMovies();
   }, []);
+
+  // Переформирование сетки и изменении размеров окна
+  useEffect(() => {
+    setTimeout(() => {
+      window.addEventListener('resize', showMovies);
+    }, 800)
+  });
 
   return (
     <section className='movies'>

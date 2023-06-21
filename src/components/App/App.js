@@ -74,11 +74,9 @@ function App() {
           setCurrentUser(userData);
 
           setSavedMovies(movies);
-          setIsLoading(false);
         })
         .catch((err) => {
           console.log(err);
-          setIsLoading(false);
         })
         .finally(() => {
           setIsLoading(false);
@@ -96,12 +94,13 @@ function App() {
       .getInitialMovies()
       .then((movies) => {
         localStorage.setItem('isAllMovies', JSON.stringify(movies));
-        setIsLoading(false);
       })
       .catch((err) => {
         console.log(err);
+      })
+      .finally(() => {
         setIsLoading(false);
-      });
+      })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
