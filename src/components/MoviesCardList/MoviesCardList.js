@@ -1,7 +1,13 @@
+// React
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+
+// Components
 import MoviesCard from '../MoviesCard/MoviesCard';
+import SearchError from '../SearchError/SearchError';
 import Preloader from '../Preloader/Preloader';
+
+// Consts
 import {
   MOVIE_GRID_NUMBER_BIG,
   MOVIE_GRID_NUMBER_BIG_EXTRA,
@@ -18,9 +24,12 @@ function MoviesCardList({
   onMovieDelete,
   isLoading,
   savedMovies,
+  notFoundError,
+  serverError,
 }) {
   // Variables
   const [moviesCount, setMoviesCount] = useState(0);
+
 
   const location = useLocation();
 
@@ -57,12 +66,22 @@ function MoviesCardList({
   useEffect(() => {
     setTimeout(() => {
       window.addEventListener('resize', showMovies);
-    }, 800)
+    }, 800);
   });
 
   return (
     <section className='movies'>
       {isLoading && <Preloader />}
+      {notFoundError && !isLoading && (
+        <SearchError error={'Ничего не найдено'} />
+      )}
+      {serverError && !isLoading && (
+        <SearchError
+          error={
+            'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз'
+          }
+        />
+      )}
       {!isLoading && (
         <div className='elements'>
           <ul
@@ -85,7 +104,7 @@ function MoviesCardList({
           </ul>
           <div
             className={`elements__extra ${
-              location.pathname === '/movies' ? 'element__extra-visible' : ''
+              (location.pathname === '/movies' && !notFoundError && !serverError && (movies.length > moviesCount) ) ? 'element__extra-visible' :  '' 
             }`}
           >
             <button

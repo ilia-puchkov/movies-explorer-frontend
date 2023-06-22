@@ -14,8 +14,8 @@ function Movies({
   const [isClearMovies, setIsClearMovies] = useState([]);
   const [filteredMovies, setFilteredMovies] = useState([]);
   const [isShort, setIsShort] = useState(false);
-  //const [isReqErr, setIsReqErr] = useState(false); //ошибка запроса к серверу
-  //const [isNotFound, setIsNotFound] = useState(false); //фильмы по запросу не найдены
+  const [isServerErr, setIsServerErr] = useState(false);
+  const [isNotFound, setIsNotFound] = useState(false);
   const [isAllMovies, setIsAllMovies] = useState([]);
 
   const moviesApi = new MoviesApi({
@@ -26,8 +26,8 @@ function Movies({
   });
 
   useEffect(() => {
-    if (localStorage.getItem('isAllMovies')) {
-      const movies = JSON.parse(localStorage.getItem('isAllMovies'));
+    if (localStorage.getItem('movies')) {
+      const movies = JSON.parse(localStorage.getItem('movies'));
       setIsClearMovies(movies);
       if (localStorage.getItem('shotMovies') === 'true') {
         setFilteredMovies(shortDuration(movies));
@@ -47,6 +47,11 @@ function Movies({
 
   function handleFilterMovies(movies, inquiry, short) {
     const moviesList = filterMovies(movies, inquiry, short);
+    if (moviesList.length === 0) {
+      setIsNotFound(true);
+    } else {
+      setIsNotFound(false);
+    }
     setIsClearMovies(moviesList);
     setFilteredMovies(short ? shortDuration(moviesList) : moviesList);
     localStorage.setItem('movies', JSON.stringify(moviesList));
@@ -54,7 +59,6 @@ function Movies({
   }
 
   function onSearchMovies(inquiry) {
-    console.log(inquiry);
     localStorage.setItem('moviesSearch', inquiry);
     localStorage.setItem('shortMovies', isShort);
 
@@ -65,10 +69,10 @@ function Movies({
         .then((movies) => {
           setIsAllMovies(movies);
           handleFilterMovies(movies, inquiry, isShort);
-          //setIsReqErr(false);
+          setIsServerErr(false);
         })
         .catch((err) => {
-          //setIsReqErr(true);
+          setIsServerErr(true);
           console.log(err);
         })
         .finally(() => {
@@ -103,6 +107,8 @@ function Movies({
         onMovieDelete={onMovieDelete}
         isLoading={isLoading}
         savedMovies={savedMovies}
+        notFoundError={isNotFound}
+        serverError={isServerErr}
       />
     </>
   );

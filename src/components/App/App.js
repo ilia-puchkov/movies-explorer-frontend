@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 
-// Pages
+// Components
 import Main from '../Main/Main';
 import Profile from '../Profile/Profile';
 import Footer from '../Footer/Footer';
@@ -12,6 +12,7 @@ import Header from '../Header/Header';
 import NotFound from '../NotFound/NotFound';
 import Navigation from '../Navigation/Navigation';
 import Movies from '../Movies/Movies';
+import SavedMovies from '../SavedMovies/SavedMovies';
 
 // Popups
 import InfoTooltip from '../InfoToolTip/InfoToolTip';
@@ -27,8 +28,6 @@ import ProtectedRouteElement from '../ProtectedRoute/ProtectedRoute';
 
 // APIs
 import MainApi from '../../utils/MainApi';
-import MoviesApi from '../../utils/MoviesApi';
-import SavedMovies from '../SavedMovies/SavedMovies';
 
 function App() {
   //Variables
@@ -54,18 +53,10 @@ function App() {
     },
   });
 
-  const moviesApi = new MoviesApi({
-    url: 'https://api.nomoreparties.co/',
-    headers: {
-      'content-type': 'application/json',
-    },
-  });
-
   // Получение данных
   useEffect(() => {
     setIsLoading(true);
     handleCheckToken();
-    
 
     if (isLoggedIn) {
       setIsLoading(true);
@@ -80,29 +71,10 @@ function App() {
         })
         .finally(() => {
           setIsLoading(false);
-        })
+        });
     }
-    console.log(currentUser);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLoggedIn]);
-
-  // Получение всех фильмов
-  useEffect(() => {
-    setIsLoading(true);
-
-    moviesApi
-      .getInitialMovies()
-      .then((movies) => {
-        localStorage.setItem('isAllMovies', JSON.stringify(movies));
-      })
-      .catch((err) => {
-        console.log(err);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   // Работа с пользователем
   //  Логин
@@ -126,9 +98,7 @@ function App() {
     mainApi
       .register(data)
       .then((res) => {
-        setIsRegisteredOk(true);
-        setIsRegisterPopupOpen(true);
-        navigate('/signin', { replace: true });
+        handleLogin(data);
       })
       .catch((err) => {
         console.log(err);
@@ -158,6 +128,8 @@ function App() {
     localStorage.removeItem('jwt');
     navigate('/signin', { replace: true });
     setIsLoggedIn(false);
+    localStorage.removeItem('movies');
+    localStorage.removeItem('isAllMovies')
   }
 
   // Обновление данных профиля
