@@ -15,3 +15,5 @@
 
 ## Доступ к проекту
 Макет Figma: https://disk.yandex.ru/d/Ug4WGBnedR2USA
+Домен: https://movies-reras.students.nomoredomains.rocks
+Pull: https://github.com/ilia-puchkov/movies-explorer-frontend/pull/2
