@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
 import linkLogo from '../../images/portfolio-link-arrow.svg';
 
 function Portfolio() {

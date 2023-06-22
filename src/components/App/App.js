@@ -73,7 +73,6 @@ function App() {
           setIsLoading(false);
         });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLoggedIn]);
 
   // Работа с пользователем
