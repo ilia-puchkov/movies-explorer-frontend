@@ -1,6 +1,6 @@
 // React
 import { useEffect, useState } from 'react';
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 
 // Components
 import Main from '../Main/Main';
@@ -44,6 +44,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState({});
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   const mainApi = new MainApi({
     url: 'https://api.movies-reras.students.nomoredomains.rocks',
@@ -114,7 +115,12 @@ function App() {
         .checkToken(jwt)
         .then((res) => {
           setIsLoggedIn(true);
-          navigate('/movies', { replace: true });
+          if (
+            location.pathname === '/signin' ||
+            location.pathname === '/signup'
+          ) {
+            navigate('/movies', { replace: true });
+          }
         })
         .catch((err) => {
           console.log(err);
@@ -208,7 +214,6 @@ function App() {
               <ProtectedRouteElement
                 element={Movies}
                 isLoggedIn={isLoggedIn}
-                //movies={movies}
                 savedMovies={savedMovies}
                 isSavedMoviesPage={false}
                 onMovieLike={handleAddMovie}
