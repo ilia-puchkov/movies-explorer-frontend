@@ -127,8 +127,7 @@ function App() {
     localStorage.removeItem('jwt');
     navigate('/signin', { replace: true });
     setIsLoggedIn(false);
-    localStorage.removeItem('movies');
-    localStorage.removeItem('isAllMovies')
+    localStorage.clear();
   }
 
   // Обновление данных профиля
