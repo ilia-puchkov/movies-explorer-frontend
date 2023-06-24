@@ -52,7 +52,7 @@ function Register(props) {
           maxLength='40'
           required
           value={values.email || ''}
-          onChange={handleChange}
+          onChange={handleChange}          
         />
         <span className='form__input-error email-input-error form__input-error_visible'>
           {errors.email}
