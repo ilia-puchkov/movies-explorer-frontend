@@ -11,12 +11,13 @@ function Movies({
   savedMovies,
 }) {
   const [isLoading, setIsLoading] = useState(false);
-  const [isClearMovies, setIsClearMovies] = useState([]);
-  const [filteredMovies, setFilteredMovies] = useState([]);
-  const [isShort, setIsShort] = useState(false);
   const [isServerErr, setIsServerErr] = useState(false);
   const [isNotFound, setIsNotFound] = useState(false);
+
+  const [isClearMovies, setIsClearMovies] = useState([]);
+  const [filteredMovies, setFilteredMovies] = useState([]);
   const [isAllMovies, setIsAllMovies] = useState([]);
+  const [isShort, setIsShort] = useState(false);
 
   const moviesApi = new MoviesApi({
     url: 'https://api.nomoreparties.co/',
@@ -29,7 +30,7 @@ function Movies({
     if (localStorage.getItem('movies')) {
       const movies = JSON.parse(localStorage.getItem('movies'));
       setIsClearMovies(movies);
-      if (localStorage.getItem('shotMovies') === 'true') {
+      if (localStorage.getItem('shortMovies') === 'true') {
         setFilteredMovies(shortDuration(movies));
       } else {
         setFilteredMovies(movies);

@@ -9,11 +9,9 @@ function SavedMovies({
   onMovieDelete,
   savedMovies,
 }) {
-  const [userMovies, setIsUserMovies] = useState(savedMovies);
-  const [filteredMovies, setFilteredMovies] = useState([]);
+  const [userMovies, setUserMovies] = useState(savedMovies);
+  const [filteredMovies, setFilteredMovies] = useState(userMovies);
   const [isShort, setIsShort] = useState(false);
-  //const [isReqErr, setIsReqErr] = useState(false); //ошибка запроса к серверу
-  const [isNotFound, setIsNotFound] = useState(false); //фильмы по запросу не найдены
 
   useEffect(() => {
     setFilteredMovies(savedMovies);
@@ -22,34 +20,32 @@ function SavedMovies({
   useEffect(() => {
     if (localStorage.getItem('userShortMovies') === 'true') {
       setIsShort(true);
-      setIsUserMovies(shortDuration(savedMovies));
+      setUserMovies(shortDuration(savedMovies));
     } else {
       setIsShort(false);
-      setIsUserMovies(savedMovies);
+      setUserMovies(savedMovies);
     }
   }, [savedMovies]);
 
   function onSearchMovies(inquiry) {
     const moviesList = filterMovies(savedMovies, inquiry, isShort);
-    if (moviesList.length === 0) {
-      setIsNotFound(true);
-    } else {
+    if (moviesList.length !== 0) {
       setFilteredMovies(moviesList);
-      setIsUserMovies(moviesList);
+      setUserMovies(moviesList);
     }
   }
 
   function handleShorts() {
-    setIsShort(!isShort);
     if (!isShort) {
-      setFilteredMovies(shortDuration(userMovies));
+      setIsShort(true);
+      localStorage.setItem('userShortMovies', true);
+      setUserMovies(shortDuration(filteredMovies));
     } else {
-      setFilteredMovies(userMovies);
+      setIsShort(false);
+      localStorage.setItem('userShortMovies', false);
+      setUserMovies(filteredMovies);
     }
-    localStorage.setItem('userShortMovies', !isShort);
   }
-  console.log(filteredMovies);
-  console.log(userMovies);
 
   return (
     <>
@@ -59,7 +55,7 @@ function SavedMovies({
         isShortMovies={isShort}
       />
       <MoviesCardList
-        movies={filteredMovies}
+        movies={userMovies}
         isSavedMoviesPage={isSavedMoviesPage}
         onMovieLike={onMovieLike}
         onMovieDelete={onMovieDelete}
