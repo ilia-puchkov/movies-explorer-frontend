@@ -110,11 +110,13 @@ function App() {
   //Проверка токена
   const handleCheckToken = () => {
     const jwt = localStorage.getItem('jwt');
+    const path = location.pathname;
     if (jwt) {
       mainApi
         .checkToken(jwt)
         .then((res) => {
           setIsLoggedIn(true);
+          navigate(path);
           if (
             location.pathname === '/signin' ||
             location.pathname === '/signup'
