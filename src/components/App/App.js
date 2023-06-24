@@ -145,6 +145,8 @@ function App() {
       .then((userData) => {
         setCurrentUser(userData);
         setIsError('');
+        setIsRegisteredOk(true);
+        setIsRegisterPopupOpen(true);
         handleProfileClose();
       })
       .catch((err) => {
