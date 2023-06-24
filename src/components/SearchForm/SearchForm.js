@@ -1,9 +1,11 @@
 // elements
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 
 function SearchForm({  onSearch,  onFilter, isShortMovies }) {
   const [inquiry, setInquiry] = useState('');
+  const location = useLocation();
 
   function handleInquiry(e) {
     setInquiry(e.target.value);
@@ -14,6 +16,13 @@ function SearchForm({  onSearch,  onFilter, isShortMovies }) {
 
     onSearch(inquiry);
   }
+
+  useEffect(() => {
+    if(location.pathname === '/movies' && localStorage.getItem('moviesSearch')) {
+      const currentInquiry = localStorage.getItem('moviesSearch');
+      setInquiry(currentInquiry);
+    }
+  }, [])
 
   return (
     <section className='search'>
