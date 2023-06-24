@@ -28,6 +28,8 @@ function Profile({
     onUpdateUser(values);
   }
 
+  const userDataValidity = (!isValid || (currentUser.name === values.name && currentUser.email === values.email));
+
   return (
     <main className='profile'>
       <h1 className='profile__title'>Привет, {currentUser.name}!</h1>
@@ -87,10 +89,10 @@ function Profile({
             </span>
             <button
               className={`form__logIn-button form__profile-button ${
-                !isValid ? 'form__logIn-button_disabled' : ''
+                userDataValidity ? 'form__logIn-button_disabled' : ''
               }`}
               type='submit'
-              disabled={!isValid ? true : false}
+              disabled={userDataValidity ? true : false}
             >
               Сохранить
             </button>

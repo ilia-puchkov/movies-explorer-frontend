@@ -11,6 +11,10 @@ const MOVIE_GRID_NUMBER_BIG_EXTRA = 3;
 const MOVIE_GRID_NUMBER_MEDIUM_EXTRA = 2;
 const MOVIE_GRID_NUMBER_SMALL_EXTRA = 2;
 
+// Сообщения для пользователя (в InfoToolTip)
+const successText = 'Отлично обновились!';
+const errorText = 'Что-то пошло не так! Попробуйте ещё раз';
+
 export {
   SHORT_MOVIE_DURATION,
   MOVIE_GRID_NUMBER_BIG,
@@ -19,4 +23,6 @@ export {
   MOVIE_GRID_NUMBER_MEDIUM_EXTRA,
   MOVIE_GRID_NUMBER_SMALL,
   MOVIE_GRID_NUMBER_SMALL_EXTRA,
+  successText,
+  errorText,
 };
