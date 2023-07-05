@@ -1,7 +1,10 @@
-# Frontend movies (в рамках дипломной работы Яндекс.Практикум)
+![logo](./src/images/movies.png)
+
+# проект Frontend movies (в рамках дипломной работы Яндекс.Практикум)
+Совместный проект Яндекс.Практикум и Beat Film Festival.
+Приложение для поиска среди фильмов-участников фестиваля с возможностью сохранить понравившиеся работы.
 
 ### На основе:
-* HTML
 * CSS
 * JS
 * React
@@ -14,6 +17,5 @@
 * Просмотр списка любимых фильмов
 
 ## Доступ к проекту
-Макет Figma: https://disk.yandex.ru/d/Ug4WGBnedR2USA
-Домен: https://movies-reras.students.nomoredomains.rocks
-Pull: https://github.com/ilia-puchkov/movies-explorer-frontend/pull/2
+Полный сайт: https://movies-reras.students.nomoredomains.rocks
+Бек: https://github.com/ilia-puchkov/movies-explorer-api

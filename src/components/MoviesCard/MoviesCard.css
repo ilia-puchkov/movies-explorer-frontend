@@ -36,6 +36,10 @@
   border-bottom-right-radius: 10px;
 }
 
+.element__bottom-block {
+  max-width: calc(100% - 30px);
+}
+
 .element__name {
   margin: 0;
   width: 220px;
@@ -110,7 +114,7 @@
     height: 190px;
   }
   .element__name {
-    width: 289px;
+    width: 100%;
   }
   .element__link {
     max-height: 190px;

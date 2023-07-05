@@ -38,7 +38,7 @@ function MoviesCard(props) {
         />
       </a>
       <div className='element__bottom'>
-        <div>
+        <div className="element__bottom-block">
           <h2 className='element__name'>{props.card.nameRU}</h2>
           <p className='element__duration'>{toHours(props.card.duration)}</p>
         </div>
