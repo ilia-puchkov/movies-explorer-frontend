@@ -36,8 +36,13 @@
   border-bottom-right-radius: 10px;
 }
 
+.element__bottom-block {
+  max-width: calc(100% - 30px);
+}
+
 .element__name {
   margin: 0;
+  width: 220px;
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
@@ -107,6 +112,9 @@
   .element__image {
     width: 339px;
     height: 190px;
+  }
+  .element__name {
+    width: 100%;
   }
   .element__link {
     max-height: 190px;

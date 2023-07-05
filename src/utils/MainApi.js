@@ -65,8 +65,18 @@ class MainApi {
     }).then(this._checkResponse);
   }
 
+   //получение фильмов
+   getUserMovies(){
+    return fetch(this._url + '/movies', {
+      method: 'GET',
+      headers: this._headers
+    })
+    .then(this._checkResponse);
+  }
+
   //Добавление фильма
   addCard(movieData) {
+    console.log(movieData);
     return fetch(this._url + '/movies', {
       method: 'POST',
       headers: this._headers,
@@ -76,9 +86,9 @@ class MainApi {
         duration: movieData.duration,
         year: movieData.year,
         description: movieData.description,
-        image: movieData.image.url,
+        image: 'https://api.nomoreparties.co' + movieData.image.url,
         trailerLink: movieData.trailerLink,
-        thumbnail: movieData.image.formats.thumbnail.url,
+        thumbnail: 'https://api.nomoreparties.co' + movieData.image.formats.thumbnail.url,
         movieId: movieData.id,
         nameRU: movieData.nameRU,
         nameEN: movieData.nameEN,
